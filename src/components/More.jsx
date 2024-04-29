@@ -2,18 +2,21 @@ import React, { useEffect, useState } from "react";
 
 const More = ({ moreData }) => {
   const [ismore, setIsmore] = useState(false);
+
+
   return (
     <div>
       <button
         onClick={() => {
           setIsmore(!ismore);
         }}
+        className="bg-slate-200 border    rounded-lg  p-3 "
       >
-        {" "}
-        more{" "}
+        see more{" "}
       </button>
       {ismore ? (
-        <div>
+        <div className="fixed top-0 text-left left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
+          
           <div>
             <p> age : {moreData.dob.age}</p>
           </div>
